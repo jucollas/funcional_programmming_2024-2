@@ -1,0 +1,11 @@
+
+package:         new-project-0.1.0.0
+os:              linux
+arch:            x86_64
+compiler:        ghc-9.4.8
+client:          cabal-install-3.10.2.1
+dependencies:    base-4.17.2.1
+install-outcome: InstallOk
+docs-outcome:    NotTried
+tests-outcome:   NotTried
+

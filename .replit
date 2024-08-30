@@ -1,0 +1,16 @@
+# Unfortunately, cabal uses /home/runner/REPL_SLUG in its configuration,
+# so forking forgets everything. That's why we're doing cabal update here.
+run = "cabal update && { echo main ; cat - ; } | exec cabal repl"
+entrypoint = "app/Main.hs"
+
+[nix]
+channel = "stable-24_05"
+
+[languages.haskell]
+pattern = "**/*.hs"
+
+[languages.haskell.languageServer]
+start = ["haskell-language-server-wrapper", "--lsp"]
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix", ".ghci"]
